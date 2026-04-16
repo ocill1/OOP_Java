@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class NilaiDemo {
     public static void main(String[] args) {
         Nilai nilaiku = new Nilai();
@@ -16,5 +17,23 @@ public class NilaiDemo {
         nilaiDia.isiData();//input data
         nilaiDia.hitungNilai();
         nilaiDia.cetakNilai();
+
+        nilaimu.judul();
+        nilaiku.daftarNilai();
+        nilaimu.daftarNilai();
+        
+        Scanner input=new Scanner(System.in);
+        System.out.print("Jumlah Mahasiswa : "); int n=input.nextInt();
+        Nilai[] nilaibyk = new Nilai[n];//array object
+        for(int i=0;i<n;i++){
+            System.out.println("Mahasiswa ke-"+(i+1));
+            nilaibyk[i]=new Nilai();
+            nilaibyk[i].isiData();
+            nilaibyk[i].hitungNilai();
+        }
+        nilaibyk[0].judul(); //cetak data
+        for(int i=0;i<n;i++){
+            nilaibyk[i].daftarNilai();
+        }
     }
 }
